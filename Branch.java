@@ -18,13 +18,30 @@ public class Branch {
 
     //
     public boolean addNewCustomer(String customerName, double intialTransactionAmount) {
-       /* if (findCustomer(customerName) == null) {
+       if (findCustomer(customerName) == null) {
             this.cutomers.add(new Customer(customerName, intialTransactionAmount));
             return true;
 
         }
-        */
+
+    //
+    public boolean addCustomerTransaction(String customerName, double initialTransactionAmount) {
+        Customer existingCustomer = findCustomer(customerName);
+        if (existingCustomer != null) {
+            existingCustomer.addTransactionAmount(initialTransactionAmount);
+            return true;
+        }
         return false;
+    }
+
+    private Customer findCustomer(String customerName) {
+        for (int i = 0; i < this.cutomers.size(); i++) {
+            Customer checkedCustomer = this.cutomers.get(i);
+            if (checkedCustomer.getCustomerName().equals(customerName)) {
+                return checkedCustomer;
+            }
+        }
+        return null;
     }
 
 }
