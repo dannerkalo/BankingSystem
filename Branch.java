@@ -15,6 +15,10 @@ public class Branch {
     public String getBranchName() {
         return branchName;
     }
+//
+    public ArrayList<Customer> getCustomers(){
+        return cutomers;
+    }
 
     //
     public boolean addNewCustomer(String customerName, double intialTransactionAmount) {

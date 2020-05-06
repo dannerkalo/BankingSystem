@@ -23,4 +23,5 @@ public class Customer {
     public ArrayList<Double> getCustomerTransaction(){
         return cutomerTransactions;
     }
+
 }
