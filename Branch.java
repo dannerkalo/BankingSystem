@@ -23,6 +23,8 @@ public class Branch {
             return true;
 
         }
+        return false;
+    }
 
     //
     public boolean addCustomerTransaction(String customerName, double initialTransactionAmount) {
